@@ -1,0 +1,19 @@
+<div class="container center">
+
+  <label for="">First Number</label><br/>
+  <input (input)="getFirst(first.value)"type="text" name="num1" (change)="change1=false" #first/>
+  <br/>
+  <label for="">Second Number</label><br/>
+  <input (input)="getSecond(second.value)"type="text" name="num2" (change)=" change1=false" #second/>
+  <hr/>
+  <div class="container" *ngIf="num1&&num2">
+  <button (click)="onClickAdd()" (click)="change1=true" class="btn btn-primary" >+</button>&nbsp;
+  <button (click)="onClickSubtract()" (click)="change1=true" class="btn btn-primary" >-</button>&nbsp;
+  <button (click)="onClickMultiply()" (click)="change1=true" class="btn btn-primary" >*</button>&nbsp;
+  <button (click)="onClickDivision()"(click)="change1=true" class="btn btn-primary" >/</button>&nbsp;
+</div>
+<hr/>
+<div *ngIf="num1&&num2&&change1">
+  <input [value]="answer" type="text" />
+</div>
+</div>
