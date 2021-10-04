@@ -16,11 +16,13 @@ getFirst(value : any){
   const val= parseInt(value);
   this.num1=val;
   console.log(val);
+  this.change1=false;
 }
 getSecond(value: any){
   const val= parseInt(value);
   this.num2=val;
   console.log(val);
+  this.change1=false;
 }
 
 onClickAdd(){
