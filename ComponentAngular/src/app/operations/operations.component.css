@@ -1,0 +1,18 @@
+.buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Sum{
+    margin:13px 
+}
+.Minus{
+    margin:13px 
+}
+
+.Multiply{
+    margin:13px 
+}
+.Divide{
+    margin:13px 
+}

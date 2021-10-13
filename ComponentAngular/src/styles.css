@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+@import'bulma/css/bulma.css';
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+html,body{
+  background-color:grey;
+  height: 100%;
+  align-items: center;
+  text-align: center;
+  padding: 50px 0;
+  position: center;
+}

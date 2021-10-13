@@ -1,0 +1,12 @@
+ 
+
+    <div class="numbers">
+        <app-numbers (NUM1)="getFirst($event)" (NUM2)="getSecond($event)" ></app-numbers>
+    </div>
+    <div class="operations">
+        <app-operations (newOperationEvent)="getOperation($event)"></app-operations>
+    </div>
+    <div class="answer">
+        <app-result [resNum1]="num1" [resNum2]="num2" [resOperation]="operation"></app-result>
+    </div>
+   
