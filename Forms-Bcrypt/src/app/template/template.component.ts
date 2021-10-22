@@ -1,6 +1,7 @@
 
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import * as bcrypt from 'bcryptjs';
 
 @Component({
   selector: 'app-template',
@@ -12,7 +13,8 @@ export class TemplateComponent implements OnInit {
 isShown=false;
 val={name:'',age:null, mobileNumber:null,email:'' ,password: ''};
 
-hashedpass=[];
+  salt = bcrypt.genSaltSync(10);
+  pass = bcrypt.hashSync(this.val.password, this.salt);
 
  onSubmit(v: NgForm){
     console.log(v.value,v.valid);
