@@ -1,0 +1,53 @@
+<mat-card class="login-page">
+  <mat-card-title>Job Profile</mat-card-title>
+  <mat-card-content>
+    <form class="login-form data-form" [formGroup]="job" (ngSubmit)="onSubmit() ">
+      <mat-form-field>
+        <input matInput type="text" formControlName="company" placeholder="Company" />
+      </mat-form-field>
+      <mat-error *ngIf="company.errors?.required && company.touched">
+        Company is required
+      </mat-error>
+      <mat-form-field>
+        <input matInput type="text"formControlName="location" placeholder="Location" />
+      </mat-form-field>
+      <mat-error *ngIf="location.errors?.required && location.touched">
+        Location is required
+      </mat-error>
+      <mat-form-field>
+        <input matInput type="text"formControlName="jobTitle" placeholder="Job Title" />
+      </mat-form-field>
+      <mat-error *ngIf="jobTitle.errors?.required && jobTitle.touched">
+        Job Title is required
+      </mat-error>
+      <mat-form-field>
+        <input matInput type="numbers" formControlName="experience" placeholder="Experience" />
+      </mat-form-field>
+      <mat-error *ngIf="experience.errors?.required && experience.touched">
+        Experience is required
+      </mat-error>
+      <mat-form-field>
+        <input matInput type="numbers" formControlName="salary" placeholder="Salary" />
+      </mat-form-field>
+      <mat-error *ngIf="salary.errors?.required && salary.touched">
+        Salary is required
+      </mat-error>
+      <mat-error *ngIf="salary.errors?.maxlength">
+       Only 5 Digit Salary
+      </mat-error>
+      <button mat-raised-button color="primary" [disabled]="!job.valid" (click)="show()">Login</button>
+    </form>
+  </mat-card-content>
+</mat-card>
+
+<div class="data" *ngIf="isShown">
+  Company Name:{{ job.controls.company.value }}
+  <br />
+  Location:{{ job.controls.location.value }}
+  <br />
+  Job Title:{{ job.controls.jobTitle.value  }}
+  <br />
+  Experience:{{ job.controls.experience.value }}
+  <br />
+  Salary:{{ job.controls.salary.value  }}
+</div>

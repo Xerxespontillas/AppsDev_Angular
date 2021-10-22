@@ -1,0 +1,29 @@
+.login-page {
+  width: 500px;
+  margin: 5px auto 0 auto;
+  position: absolute;
+ 
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.test-input {
+  border-bottom: 1px solid grey;
+  margin-bottom: 5px;
+}
+div{
+  display: inline-block;
+  width: 200px;
+  margin: auto;
+}
+.data{
+  position: absolute;
+  bottom: 100px;
+  right: 250px;
+font-size: 18px;
+display: flex;
+
+}
